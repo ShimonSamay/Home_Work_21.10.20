@@ -149,7 +149,7 @@
 //     Dog.Age > max.Age ? max = Dog : "" ;
 //     }
 //     console.log(max);
-//     return max.Age > 10 ? resolve (max) : reject ("Oldest dog Age is less than 10") 
+//      max.Age < 100 ? resolve (`${max.Name} ${max.Age} ${max.Type}`) : reject (" Your Oldest dog Age is less than 10") 
 //   },5000)
 // })
 // };
@@ -178,14 +178,14 @@
 //   }
 // }
 // getOlderDog()
-// .then((res) => {dogans.innerHTML +=`Name: ${res.Name} Age: ${res.Age} Type: ${res.Type}`})
+// .then((res) => {dogans.innerHTML +=res})
 // .catch((rej) => {dogans.innerHTML+=rej;})
 // .finally (() => {clearDogLoading()});
 
 
-// // exe.3 - 2.0
+// exe.3 - 2.0
 // let dog4 = new Dog ("ros" , 7 , "boldog");
-// let dog5 = new Dog ("chester" , 19 , "amstaf");
+// let dog5 = new Dog ("chester" , 9 , "amstaf");
 // let dog6 = new Dog ("navy" , 4 , "pincher");
 
 // function findtOldestDogAgain (secondDogsArray) {
@@ -196,7 +196,7 @@
 //       if(dog.Age > oldestDog.Age)oldestDog = dog ;
 //       });
 //       console.log(oldestDog);
-//       return oldestDog.Age < 10 ? resolve (oldestDog) : reject ("oldest Dog Age is less than 10") ;
+//       oldestDog.Age > 10 ? resolve (`${oldestDog.Name} ${oldestDog.Age} ${oldestDog.Type}`) : reject (" Your oldest Dog Age is less than 10") ;
 //     },5000);
 //   });
 // };
@@ -222,11 +222,9 @@
 // };
 
 // getOldestDogAgain()
-// .then((res) => {secondAnswer.innerText = `Name: ${res.Name} Age: ${res.Age} Type: ${res.Type}`})
-// .catch((reject) => {secondAnswer.innerText = reject})
+// .then((res) => {secondAnswer.innerText += res})
+// .catch((rej) => {secondAnswer.innerText += rej})
 // .finally(() => {clearSecondLoading()});
-
-
 
 
 // exe.3
@@ -273,11 +271,11 @@
 // }
 
 // function showGif () {
-//   appDiv.innerHTML = `<img src="https://media4.giphy.com/media/d3mlE7uhX8KFgEmY/giphy.gif">`
+//  appDiv.innerHTML = `<img src="https://media4.giphy.com/media/d3mlE7uhX8KFgEmY/giphy.gif">`
 // }
 
 // function clearGiff () {
-//   appDiv.style.display = "none";
+//  appDiv.style.display = "none";
 // }
 
 // async function printAppartment () {
